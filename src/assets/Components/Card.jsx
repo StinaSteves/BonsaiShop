@@ -3,27 +3,30 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 
 export default function CARD(props) {
-  // Zustand für die Menge (initial auf 1 gesetzt)
   const [quantity, setQuantity] = useState(1);
 
-  // Funktion zum Erhöhen der Menge
   const increaseQuantity = () => {
-    setQuantity(prevQuantity => prevQuantity + 1); // Menge um 1 erhöhen
+    setQuantity(prevQuantity => prevQuantity + 1);
   };
 
-  // Funktion zum Verringern der Menge
   const decreaseQuantity = () => {
-    if (quantity > 1) { // Verhindern, dass die Menge kleiner als 1 wird
-      setQuantity(prevQuantity => prevQuantity - 1); // Menge um 1 verringern
+    if (quantity > 1) {
+      setQuantity(prevQuantity => prevQuantity - 1);
     }
   };
 
-  // Funktion zum Setzen der Menge direkt über das Input-Feld
   const handleQuantityChange = (e) => {
-    const value = Number(e.target.value); // Wert aus dem Input
+    const value = Number(e.target.value);
     if (value >= 1) {
-      setQuantity(value); // Nur positive Werte oder mindestens 1 erlauben
+      setQuantity(value);
     }
+  };
+
+  const handleBuyNow = () => {
+    props.addToCart(
+      { title: props.title, price: props.price, image: props.image },
+      quantity
+    );
   };
 
   return (
@@ -39,21 +42,16 @@ export default function CARD(props) {
           <div className="quantity">
             <h3>Menge:</h3>
             <div className="quantity-controls">
-              {/* Decrease Button */}
               <button onClick={decreaseQuantity} className="quantity-btn">
                 -
               </button>
-
-              {/* Input für Menge */}
               <input
                 type="number"
                 value={quantity}
                 min="1"
-                onChange={handleQuantityChange} // Update die Menge direkt durch Eingabe
+                onChange={handleQuantityChange}
                 className="quantity-input"
               />
-
-              {/* Increase Button */}
               <button onClick={increaseQuantity} className="quantity-btn">
                 +
               </button>
@@ -66,15 +64,19 @@ export default function CARD(props) {
             </p>
           </div>
 
-          <a href="#">Buy Now</a>
+          <button onClick={handleBuyNow} className="buy-now-btn">
+            Buy Now
+          </button>
         </div>
       </div>
     </div>
   );
 }
 
+
 CARD.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
+  addToCart: PropTypes.func.isRequired, // Funktion zum Hinzufügen in den Warenkorb
 };

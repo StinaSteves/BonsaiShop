@@ -5,11 +5,24 @@
 }
 
 .shopping-cart {
-    color: #2f4f4f;
     font-size: 2rem;
     position: absolute; /* Positionierung relativ zum Container */
     top: 20px; /* Abstand von der oberen Kante des Containers */
     right: 0px; /* Abstand von der rechten Kante des Containers */
     width: 320px; /* Breite der Karte */
   
+}
+
+.shopping-cart .cart-icon {
+    color: #1e3636;  /* Setze die gewünschte Farbe */
+}
+
+.shopping-cart a {
+    text-decoration: none;  /* Entferne Unterstrich von Links */
+}
+
+.shopping-cart .cart-count {
+    color: #1e3636;  /* Setze die Farbe */
+    border: none;
+    box-shadow: none;
 }

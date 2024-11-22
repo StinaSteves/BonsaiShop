@@ -1,0 +1,54 @@
+
+
+.cart {
+  
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 20px;
+  }
+  
+  .cart h2 {
+    text-transform: uppercase;
+    font-family: 'Poiret One', display;
+    font-weight:600;
+    font-size: 4rem;
+  }
+  
+/* Style for the cart items */
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .cart-item-image img {
+    width: 50px; /* Größe des Bildes anpassen */
+    height: auto;
+    margin-right: 15px;
+  }
+  
+  .cart-item-details {
+    flex: 1;
+  }
+  
+  .total-price {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .buyBtn{
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2f4f4f;
+    border-radius: 4px;
+    margin-top: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #ffff;
+  }
+  

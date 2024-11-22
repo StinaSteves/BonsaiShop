@@ -56,7 +56,6 @@
     width: 270px;
 }
 
-
 .container .card .contentBx {
     position: absolute;
     bottom: 0;
@@ -80,8 +79,6 @@
     letter-spacing: 1px;
     color: #111;
 }
-
-
 
 .container .card .contentBx .size,
 .container .card .contentBx .color,
@@ -121,7 +118,7 @@
     transition: .5s;
 }
 
-.container .card .contentBx a {
+.container .card .buy-now-btn {
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
     display: inline-block;
@@ -134,16 +131,47 @@
     color: #ffff;
     opacity: 0;
     transform: translateY(50px);
-    transition: .5s;
+    transition: .3s ease;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-.container .card:hover .contentBx a {
+.container .card:hover .buy-now-btn {
     opacity: 1;
     transform: translateY(0px);
     transition-delay: .8s;
 }
 
-/* Price Section - added */
+/* Klick-Effekt */
+.container .card .buy-now-btn:active {
+    transform: scale(0.95); /* Button wird leicht verkleinert */
+    background-color: #1e3636; /* Farbänderung beim Klick */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Animation für Ripple-Effekt (optional) */
+.container .card .buy-now-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.container .card .buy-now-btn:active::after {
+    width: 300%;
+    height: 300%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Price Section */
 .container .card .price {
     position: absolute;
     width: 100%;
@@ -158,7 +186,7 @@
     transform: translateY(50px);
 }
 
-.price p span{
+.price p span {
     color: sandybrown;
     font-size: 1.2rem;
 }
@@ -169,4 +197,3 @@
     transform: translateY(0px);
     transition-delay: .6s;
 }
-
