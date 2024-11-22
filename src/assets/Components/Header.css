@@ -20,7 +20,7 @@ header{
 .artText{
 
     font-family: 'Poiret One', display;
-    font-weight:600;
+    font-weight:300;
     font-size: 5rem;
   }
   
@@ -43,7 +43,7 @@ header{
   
   .styledButton {
     margin-left: 10%;
-    background-color: darkslategray; 
+    background-color: #2f4f4f; 
     color: white; 
     border: none; 
     padding: 16px 52px; 

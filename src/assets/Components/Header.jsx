@@ -1,11 +1,10 @@
 import './Header.css'
 import Bonsai from '../../../public/bonsai1.png'
-import Navigation from './Naviation.jsx'
+
 
 export default function Header(){
     return(
       <header>
-        <Navigation />
       <div className='headerWrapper'>
         <div className='bonsaiWrapper'>
         <h1 className='bonsaiText'>bonsai</h1>

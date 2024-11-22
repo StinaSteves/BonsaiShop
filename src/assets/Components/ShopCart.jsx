@@ -1,5 +1,6 @@
 import './ShopCart.css';
 
+
 export default function ShopCart({ cartItems }) {
   // Berechnung des Gesamtpreises
   const totalPrice = cartItems.reduce(
@@ -8,6 +9,7 @@ export default function ShopCart({ cartItems }) {
   );
 
   return (
+    <div className='cartBackround'>
     <div className="cart">
       <h2>Your Shopping Cart</h2>
       {cartItems.length === 0 ? (
@@ -33,6 +35,7 @@ export default function ShopCart({ cartItems }) {
           <button className='buyBtn'>pay now</button>
         </div>
       )}
+    </div>
     </div>
   );
 }
