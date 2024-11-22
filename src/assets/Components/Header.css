@@ -1,0 +1,88 @@
+
+.headerWrapper{
+    margin-top: 5%;
+    display: flex;
+}
+
+.bonsaiText {
+    font-family: 'Darker Grotesque', sans-serif;
+    writing-mode: vertical-rl;
+    font-size: 10rem;
+    transform: rotate(180deg); 
+    white-space: nowrap; 
+    font-weight: 300;
+  }
+
+.artText{
+
+    font-family: 'Poiret One', display;
+    font-weight:600;
+    font-size: 5rem;
+  }
+  
+  .underline{
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .catchPhrase{
+    font-family: 'Poiret One', display;
+    font-weight: lighter;
+   font-size: 2rem;
+   white-space: nowrap; 
+  }
+  
+  
+  .heroText{
+    font-family: 'Darker Grotesque', sans-serif;
+    margin: 10%;
+  }
+  
+  .styledButton {
+    margin-left: 10%;
+    background-color: darkslategray; /* Primary color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    padding: 16px 52px; /* Larger padding for a bigger button */
+    font-size: 1.5rem; /* Larger text size */
+   font-family: 'Poiret One', display;
+   
+    border-radius: 2px; /* Less rounded corners for a squarer look */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  .styledButton:hover {
+    background-color: #2c3e50; /* Slightly lighter shade on hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  .styledButton:active {
+    background-color: #1e272e; /* Darker shade when clicked */
+    transform: translateY(1px); /* Button sinks slightly when clicked */
+  }
+
+  #bonsaiImg{
+    position: absolute;
+margin-top: -15%;
+width: 35%;
+margin-left: 5%;
+  }
+
+  .stripe{
+ 
+margin-top: 5%;
+    width: 70vw;
+    height: 15vh;
+    background-color: #f0f0f0f0;
+    z-index: 0;
+  }
+  
+  .divZahl{
+    font-family: 'Adamina', serif;
+   color: white;
+   font-size: 10rem;
+   margin-left: 75%;
+  
+  }
+  

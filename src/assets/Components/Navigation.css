@@ -1,0 +1,59 @@
+@import url(https://fonts.bunny.net/css?family=adamina:400|darker-grotesque:300,600|poiret-one:400);
+
+
+
+.logoDiv {
+    display: flex;
+    justify-content: center; /* Zentriert das Element horizontal */
+    align-items: center;     /* Zentriert das Element vertikal */
+    width: 10vh;
+    height: 20vh;
+    background-color: #2f4f4f;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  }
+  
+  .bonsailogo {
+    height: 8vh;
+  }
+  
+  .navwrapper{
+    margin-left: 3%;
+    display: flex;
+  }
+  
+  /* Navbar-Stile */
+  .navbar {
+    justify-content: space-between; 
+    
+    padding: 10px;
+  }
+  
+  
+  .navbar ul {
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Links ausrichten */
+  }
+  
+  .navbar li {
+  
+   margin: 0 10%;  /* Abstand zwischen den Links */
+  }
+  
+  .navbar a {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 300;
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+
+

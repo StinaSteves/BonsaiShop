@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.shopping-cart {
+    color: #2f4f4f;
+    font-size: 2rem;
+    position: absolute; /* Positionierung relativ zum Container */
+    top: 20px; /* Abstand von der oberen Kante des Containers */
+    right: 0px; /* Abstand von der rechten Kante des Containers */
+    width: 320px; /* Breite der Karte */
+  
+}
