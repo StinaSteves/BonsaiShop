@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Navigation from './assets/Components/Naviation.jsx';
 import Header from './assets/Components/Header.jsx';
 import Shop from './assets/Components/Shop.jsx';
 import { FaShoppingCart } from "react-icons/fa";
@@ -26,7 +25,6 @@ function App() {
   return (
     <Router>
       <div>
-        <Navigation />
         <div className="shopping-cart">
           <Link to="/cart">
             <FaShoppingCart className="cart-icon" />

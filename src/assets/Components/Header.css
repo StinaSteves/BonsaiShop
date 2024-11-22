@@ -1,3 +1,7 @@
+header{
+  height: 65vh;
+}
+
 
 .headerWrapper{
     margin-top: 5%;
@@ -39,27 +43,27 @@
   
   .styledButton {
     margin-left: 10%;
-    background-color: darkslategray; /* Primary color */
-    color: white; /* Text color */
-    border: none; /* Remove default border */
-    padding: 16px 52px; /* Larger padding for a bigger button */
-    font-size: 1.5rem; /* Larger text size */
+    background-color: darkslategray; 
+    color: white; 
+    border: none; 
+    padding: 16px 52px; 
+    font-size: 1.5rem;
    font-family: 'Poiret One', display;
    
-    border-radius: 2px; /* Less rounded corners for a squarer look */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border-radius: 2px; 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
   }
   .styledButton:hover {
-    background-color: #2c3e50; /* Slightly lighter shade on hover */
+    background-color: #2c3e50; 
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px); /* Slight lift effect */
+    transform: translateY(-2px); 
   }
   
   .styledButton:active {
-    background-color: #1e272e; /* Darker shade when clicked */
-    transform: translateY(1px); /* Button sinks slightly when clicked */
+    background-color: #1e272e; 
+    transform: translateY(1px); 
   }
 
   #bonsaiImg{

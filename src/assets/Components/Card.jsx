@@ -1,17 +1,19 @@
 import "./Card.css";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function CARD(props) {
   const [quantity, setQuantity] = useState(1);
+  const cardRef = useRef(null); 
+  const [isVisible, setIsVisible] = useState(false);
 
   const increaseQuantity = () => {
-    setQuantity(prevQuantity => prevQuantity + 1);
+    setQuantity((prevQuantity) => prevQuantity + 1);
   };
 
   const decreaseQuantity = () => {
     if (quantity > 1) {
-      setQuantity(prevQuantity => prevQuantity - 1);
+      setQuantity((prevQuantity) => prevQuantity - 1);
     }
   };
 
@@ -29,9 +31,33 @@ export default function CARD(props) {
     );
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true); 
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="container">
-      <div className="card">
+      <div
+        className={`card ${isVisible ? "visible" : ""}`}
+        ref={cardRef} 
+      >
         <div className="imgBx">
           <img src={props.image} alt={props.title} />
         </div>
@@ -73,10 +99,9 @@ export default function CARD(props) {
   );
 }
 
-
 CARD.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  addToCart: PropTypes.func.isRequired, // Funktion zum Hinzufügen in den Warenkorb
+  addToCart: PropTypes.func.isRequired,
 };

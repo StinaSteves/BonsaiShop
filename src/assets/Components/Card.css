@@ -13,6 +13,14 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08), 
     0 4px 6px rgba(0, 0, 0, 0.04);
     background-color: #fff;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.container .card.visible{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .container .card:before {
@@ -143,14 +151,14 @@
     transition-delay: .8s;
 }
 
-/* Klick-Effekt */
+
 .container .card .buy-now-btn:active {
-    transform: scale(0.95); /* Button wird leicht verkleinert */
-    background-color: #1e3636; /* Farbänderung beim Klick */
+    transform: scale(0.95); 
+    background-color: #1e3636; 
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-/* Animation für Ripple-Effekt (optional) */
+
 .container .card .buy-now-btn::after {
     content: '';
     position: absolute;
@@ -171,7 +179,7 @@
     transition: opacity 0.4s ease;
 }
 
-/* Price Section */
+
 .container .card .price {
     position: absolute;
     width: 100%;
@@ -196,4 +204,15 @@
     visibility: visible;
     transform: translateY(0px);
     transition-delay: .6s;
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Für Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

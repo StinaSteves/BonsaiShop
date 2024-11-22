@@ -16,7 +16,7 @@
     font-size: 4rem;
   }
   
-/* Style for the cart items */
+
 .cart-item {
     display: flex;
     align-items: center;
@@ -24,7 +24,7 @@
   }
   
   .cart-item-image img {
-    width: 50px; /* Größe des Bildes anpassen */
+    width: 50px; 
     height: auto;
     margin-right: 15px;
   }

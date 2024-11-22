@@ -1,46 +1,58 @@
-.card{
-    
+.card {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-
+    grid-template-columns: repeat(4, 1fr);
     margin: 50px;
-  }
-
-  .shopwrapper {
-    display: flex;
-    justify-content: center; /* Horizontal zentrieren */
-    align-items: center; /* Vertikal zentrieren */
-
-    margin: 0; /* Entfernt Standard-Abstände */
 }
 
-.shopContainer{
-    margin-top: 10%;
+.shopwrapper {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 0; 
+}
+
+.shopContainer {
+    margin-top: 17%;
 }
 
 .shop-heading {
-    position: relative; /* Ermöglicht das Überlappen der beiden Teile */
-    font-family: Arial, sans-serif; /* Schriftart */
+    position: relative; 
+    font-family: Arial, sans-serif; 
     font-weight: normal;
 }
 
-.large-shop {
+.large-shop,
+.small-shop {
+    opacity: 0; 
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; 
+}
 
-    font-size: 10rem; /* Große Schriftgröße für den ersten Teil */
-    font-weight: bold; /* Dicke Schrift */
-    position: relative; /* Keine absolute Positionierung mehr */
-    color: #f0f0f0f0; /* Farbe des ersten Teils */
+.large-shop {
+    transform: translateX(-100%); 
+    font-size: 10rem; 
+    font-weight: bold; 
+    position: relative; 
+    color: #f0f0f0f0; 
+}
+
+.large-shop.visible {
+    opacity: 1; 
+    transform: translateX(0); 
 }
 
 .small-shop {
+    transform: translate(-50%, -50%) translateX(100%); 
     font-family: 'Darker Grotesque', sans-serif;
     font-family: 'Poiret One', display;
-    font-size: 8rem; /* Kleine Schriftgröße für den zweiten Teil */
-    font-weight: 100; /* Dünne Schrift */
-    position: absolute; /* Absolute Positionierung für das Überlappen */
-    top: 50%; /* Setzt den oberen Rand des kleinen Teils auf 50% */
-    left: 50%; /* Setzt den linken Rand des kleinen Teils auf 50% */
-    transform: translate(-50%, -50%); /* Verschiebt den Text um 50% von seiner eigenen Größe */
-    color: #000; /* Farbe des zweiten Teils */
+    font-size: 8rem; 
+    font-weight: 100; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    color: #000; 
 }
 
+.small-shop.visible {
+    opacity: 1; /* Sichtbar */
+    transform: translate(-50%, -50%) translateX(0); 
+}

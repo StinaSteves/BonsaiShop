@@ -6,23 +6,23 @@
 
 .shopping-cart {
     font-size: 2rem;
-    position: absolute; /* Positionierung relativ zum Container */
-    top: 20px; /* Abstand von der oberen Kante des Containers */
-    right: 0px; /* Abstand von der rechten Kante des Containers */
-    width: 320px; /* Breite der Karte */
+    position: absolute; 
+    top: 20px; 
+    right: 0px;
+    width: 320px; 
   
 }
 
 .shopping-cart .cart-icon {
-    color: #1e3636;  /* Setze die gewünschte Farbe */
+    color: #1e3636; 
 }
 
 .shopping-cart a {
-    text-decoration: none;  /* Entferne Unterstrich von Links */
+    text-decoration: none;  
 }
 
 .shopping-cart .cart-count {
-    color: #1e3636;  /* Setze die Farbe */
+    color: #1e3636;  
     border: none;
     box-shadow: none;
 }
