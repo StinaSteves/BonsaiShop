@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
-import './Shop.css';
+import './Style/Shop.css';
 import PropTypes from 'prop-types';
 import CARD from './Card.jsx';
-import { CARD_CONCEPTS } from '../../data.js';
+import { CARD_CONCEPTS } from '../data.js';
 
 export default function Shop({ addToCart }) {
   const headingRef = useRef(null);

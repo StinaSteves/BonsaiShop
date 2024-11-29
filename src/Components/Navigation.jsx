@@ -1,5 +1,5 @@
-import './Navigation.css'
-import BonsaiLogo from '../../../public/bonsaiLogo.png'
+import './Style/Navigation.css'
+import BonsaiLogo from '../../public/bonsaiLogo.png'
 
 export default function Navigation (){
 

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'; 
-import './ShopCart.css';
+import './Style/ShopCart.css'
 
 export default function ShopCart({ cartItems }) {
   const totalPrice = cartItems.reduce(

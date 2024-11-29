@@ -1,4 +1,4 @@
-import "./Card.css";
+import "./Style/Card.css";
 import PropTypes from "prop-types";
 import { useState, useEffect, useRef } from "react";
 

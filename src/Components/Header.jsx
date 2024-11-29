@@ -1,5 +1,5 @@
-import './Header.css'
-import Bonsai from '../../../public/bonsai1.png'
+import './Style/Header.css'
+import Bonsai from '../../public/bonsai1.png'
 
 
 export default function Header(){

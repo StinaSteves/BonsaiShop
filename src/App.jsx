@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Header from './assets/Components/Header.jsx';
-import Shop from './assets/Components/Shop.jsx';
-import Navigation from './assets/Components/Naviation.jsx'
+import Header from './Components/Header.jsx';
+import Shop from './Components/Shop.jsx';
+import Navigation from './Components/Navigation.jsx';
 import { FaShoppingCart } from "react-icons/fa";
-import ShopCart from './assets/Components/ShopCart.jsx';
+import ShopCart from './Components/ShopCart.jsx';
 import './App.css';
 
 function App() {
