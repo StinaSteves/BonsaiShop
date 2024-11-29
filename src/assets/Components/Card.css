@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,800,800i,900&display=swap');
 
 .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
     margin: 20px;
-    position: relative;
-}
+  }
 
 .container .card {
     position: relative;
-    width: 320px;
-    height: 450px;
+    width: clamp(240px, 40vw, 320px);  /* Skaliert zwischen 240px und 320px, abhängig vom Viewport */
+    height: clamp(300px, 50vh, 450px); 
     overflow: hidden;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08), 
     0 4px 6px rgba(0, 0, 0, 0.04);

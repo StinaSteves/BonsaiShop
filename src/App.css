@@ -4,12 +4,13 @@
     box-sizing: border-box;
 }
 
+
 .shopping-cart {
     font-size: 2rem;
     position: absolute; 
     top: 20px; 
     right: 0px;
-    width: 320px; 
+    width: 5vw; 
   
 }
 

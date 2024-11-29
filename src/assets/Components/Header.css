@@ -1,5 +1,5 @@
-header{
-  height: 65vh;
+header {
+  height: 65vh;  /* Standardhöhe für größere Bildschirme */
 }
 
 
@@ -11,7 +11,7 @@ header{
 .bonsaiText {
     font-family: 'Darker Grotesque', sans-serif;
     writing-mode: vertical-rl;
-    font-size: 10rem;
+    font-size: clamp(2rem, 10vw, 12rem);
     transform: rotate(180deg); 
     white-space: nowrap; 
     font-weight: 300;
@@ -21,7 +21,7 @@ header{
 
     font-family: 'Poiret One', display;
     font-weight:300;
-    font-size: 5rem;
+    font-size: clamp(2rem, 5vw, 7rem);
   }
   
   .underline{
@@ -31,12 +31,13 @@ header{
   .catchPhrase{
     font-family: 'Poiret One', display;
     font-weight: lighter;
-   font-size: 2rem;
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
    white-space: nowrap; 
   }
   
   
   .heroText{
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
     font-family: 'Darker Grotesque', sans-serif;
     margin: 10%;
   }
@@ -90,3 +91,132 @@ margin-top: 5%;
   
   }
   
+
+
+/* Für kleine Smartphones (unter 480px) */
+@media (max-width: 480px) {
+
+  .stripe{
+ display: none;
+      }
+
+      header{
+        height: 48vh;
+       }
+
+
+      .bonsaiText {
+ 
+        font-size: 6rem;
+    
+      }
+    
+    .artText{
+        font-size: 3.5rem;
+      }
+
+      .catchPhrase{
+
+        font-size: 1rem;
+
+      }
+      
+      
+      .heroText{
+        font-size: 1.2rem;
+      
+      }
+
+}
+
+/* Für Smartphones (größere Displays, 481px bis 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .stripe{
+    display: none;
+         }
+
+         header{
+          height: 55vh;
+         }
+
+         .bonsaiText {
+ 
+          font-size: 8rem;
+      
+        }
+      
+      .artText{
+          font-size: 4rem;
+        }
+  
+        .catchPhrase{
+  
+          font-size: 1rem;
+  
+        }
+        
+        
+        .heroText{
+          font-size: 1.6rem;
+        
+        }
+}
+
+/* Für Tablets im Portrait (600px bis 768px) */
+@media (min-width: 600px) and (max-width: 768px) {
+
+}
+
+/* Für Tablets im Landscape und kleine Desktops (768px bis 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header{
+    height: 50vh;
+   }
+   .stripe{
+    display: none;
+         }
+
+         .bonsaiText {
+ 
+          font-size: 8rem;
+      
+        }
+      
+      .artText{
+          font-size: 4rem;
+        }
+  
+        .catchPhrase{
+  
+          font-size: 1.6rem;
+  
+        }
+        
+        
+        .heroText{
+          font-size: 1.6rem;
+        
+        }
+}
+
+/* Für mittlere Desktops (1024px bis 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  /* Dein CSS für mittlere Desktops */
+  header{
+    height: 40vh;
+   }
+}
+
+/* Für große Desktops (ab 1200px) */
+@media (min-width: 1200px) {
+  /* Dein CSS für große Desktops */
+  header{
+    height: 45vh;
+   }
+}
+
+/* Beispiel für eine andere Größe, z.B. von 600px bis 900px */
+@media (min-width: 600px) and (max-width: 900px) {
+  /* Dein CSS für Bildschirme zwischen 600px und 900px */
+
+}
